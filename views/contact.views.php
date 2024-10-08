@@ -35,37 +35,55 @@
        	   <h1>CONTACT US</h1>
        	   <hr>
        	   <p>Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-	       <form class="form-horizontal">
+	    	<?php
+				if(!empty($fallos))
+					foreach($fallos as $fallo):?>
+				<li> <?=$fallo?> </li>
+				<?php endforeach; ?>
+			
+			<?php
+				include __DIR__.'/';
+			?>
+			<?php
+			if(empty($fallos))?>
+			<div class="alert alert-info">
+			<?php
+			?>
+			
+
+			</div>
+	    
+		   <form action="<?=$_SERVER['PHP_SELF']?>" class="form-horizontal" method="post">
 	       	  <div class="form-group">
 	       	  	<div class="col-xs-6">
-	       	  	    <label class="label-control">First Name</label>
-	       	  		<input class="form-control" type="text">
+	       	  	    <label for="nombre" class="label-control">Nombre</label>
+	       	  		<input name="nombre" class="form-control" type="text" required>
 	       	  	</div>
 	       	  	<div class="col-xs-6">
-	       	  	    <label class="label-control">Last Name</label>
-	       	  		<input class="form-control" type="text">
+	       	  	    <label for="apellido" class="label-control">Apellido</label>
+	       	  		<input name="apellido" class="form-control" type="text">
 	       	  	</div>
 	       	  </div>
 	       	  <div class="form-group">
 	       	  	<div class="col-xs-12">
-	       	  		<label class="label-control">Email</label>
-	       	  		<input class="form-control" type="text">
+	       	  		<label for="email" class="label-control">Email</label>
+	       	  		<input name="email" class="form-control" type="email" required>
 	       	  	</div>
 	       	  </div>
 	       	  <div class="form-group">
 	       	  	<div class="col-xs-12">
-	       	  		<label class="label-control">Subject</label>
-	       	  		<input class="form-control" type="text">
+	       	  		<label for="sujeto" class="label-control">Sujeto</label>
+	       	  		<input name="sujeto" class="form-control" type="text" required>
 	       	  	</div>
 	       	  </div>
 	       	  <div class="form-group">
 	       	  	<div class="col-xs-12">
-	       	  		<label class="label-control">Message</label>
-	       	  		<textarea class="form-control"></textarea>
-	       	  		<button class="pull-right btn btn-lg sr-button">SEND</button>
+	       	  		<label for="mensaje" class="label-control">Mensaje</label>
+	       	  		<textarea name="mensaje" class="form-control"></textarea>
+	       	  		<button class="pull-right btn btn-lg sr-button">ENVIAR</button>
 	       	  	</div>
 	       	  </div>
-	       </form>
+		</form>
 	       <hr class="divider">
 	       <div class="address">
 	           <h3>GET IN TOUCH</h3>
