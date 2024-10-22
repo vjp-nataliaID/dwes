@@ -67,6 +67,7 @@
         <!-- First Category pictures -->
            <div id="category1" class="tab-pane active" >
               <div class="row popup-gallery">
+                <!-- Primera imagen -->
                 <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="sol">
                   <img class="img-responsive" src="images/index/portfolio/1.jpg" alt="First category picture">
@@ -105,6 +106,7 @@
                   </div>
                 </div>
                 </div> 
+                <!--Segunda imagen -->
                 <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="sol">
                     <img class="img-responsive" src="images/index/portfolio/2.jpg" alt="First category picture">
