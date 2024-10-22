@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>PhotographItem-Responsive Theme | Contact</title>
-
-	<!-- Bootstrap core css -->
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	<!-- Bootstrap core css -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!-- Font Awesome icons -->
-	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body id="page-top">
+<?php
+  include __DIR__.'/partials/inicio-doc.part.php'
+  ?>
 
 <!-- Navigation Bar -->
    <nav class="navbar navbar-fixed-top navbar-default">
@@ -55,37 +35,55 @@
        	   <h1>CONTACT US</h1>
        	   <hr>
        	   <p>Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-	       <form class="form-horizontal">
+	    	<?php
+				if(!empty($fallos))
+					foreach($fallos as $fallo):?>
+				<li> <?=$fallo?> </li>
+				<?php endforeach; ?>
+			
+			<?php
+				include __DIR__.'/';
+			?>
+			<?php
+			if(empty($fallos))?>
+			<div class="alert alert-info">
+			<?php
+			?>
+			
+
+			</div>
+	    
+		   <form action="<?=$_SERVER['PHP_SELF']?>" class="form-horizontal" method="post">
 	       	  <div class="form-group">
 	       	  	<div class="col-xs-6">
-	       	  	    <label class="label-control">First Name</label>
-	       	  		<input class="form-control" type="text">
+	       	  	    <label for="nombre" class="label-control">Nombre</label>
+	       	  		<input name="nombre" class="form-control" type="text" required>
 	       	  	</div>
 	       	  	<div class="col-xs-6">
-	       	  	    <label class="label-control">Last Name</label>
-	       	  		<input class="form-control" type="text">
+	       	  	    <label for="apellido" class="label-control">Apellido</label>
+	       	  		<input name="apellido" class="form-control" type="text">
 	       	  	</div>
 	       	  </div>
 	       	  <div class="form-group">
 	       	  	<div class="col-xs-12">
-	       	  		<label class="label-control">Email</label>
-	       	  		<input class="form-control" type="text">
+	       	  		<label for="email" class="label-control">Email</label>
+	       	  		<input name="email" class="form-control" type="email" required>
 	       	  	</div>
 	       	  </div>
 	       	  <div class="form-group">
 	       	  	<div class="col-xs-12">
-	       	  		<label class="label-control">Subject</label>
-	       	  		<input class="form-control" type="text">
+	       	  		<label for="sujeto" class="label-control">Sujeto</label>
+	       	  		<input name="sujeto" class="form-control" type="text" required>
 	       	  	</div>
 	       	  </div>
 	       	  <div class="form-group">
 	       	  	<div class="col-xs-12">
-	       	  		<label class="label-control">Message</label>
-	       	  		<textarea class="form-control"></textarea>
-	       	  		<button class="pull-right btn btn-lg sr-button">SEND</button>
+	       	  		<label for="mensaje" class="label-control">Mensaje</label>
+	       	  		<textarea name="mensaje" class="form-control"></textarea>
+	       	  		<button class="pull-right btn btn-lg sr-button">ENVIAR</button>
 	       	  	</div>
 	       	  </div>
-	       </form>
+		</form>
 	       <hr class="divider">
 	       <div class="address">
 	           <h3>GET IN TOUCH</h3>
@@ -112,14 +110,4 @@
    </div>
 <!-- Principal Content Start -->
 
-<!-- Jquery -->
-   <script type="text/javascript" src="js/jquery.min.js"></script>
-   <!-- Bootstrap core Javascript -->
-   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-   <!-- Plugins -->
-   <script type="text/javascript" src="js/jquery.easing.min.js"></script>
-   <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-   <script type="text/javascript" src="js/scrollreveal.min.js"></script>
-   <script type="text/javascript" src="js/script.js"></script>
-</body>
-</html>
+<?php include __DIR__.'/partials/fin-doc.part.php'?>
