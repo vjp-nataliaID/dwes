@@ -6,8 +6,8 @@
         private $numLikes;
         private $numDownloads;
 
-        const RUTA_IMAGENES_PORTFOLIO = '/images/index/portfolio/';
-        const RUTA_IMAGENES_GALLERY = '../';
+        const RUTA_IMAGENES_PORTFOLIO ='images/index/portfolio/';
+        const RUTA_IMAGENES_GALLERY='images/index/gallery/';
 
         public function __construct(string $nombre, string $descripcion,int $numVisualizaciones=0, int $numLikes=0, int $numDownloads=0 )
         {
