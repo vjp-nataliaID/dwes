@@ -37,18 +37,20 @@
        	   <p>Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
 	    	<?php
 				if(!empty($fallos))
+					include __DIR__.'/fallos.php';
 					foreach($fallos as $fallo):?>
 				<li> <?=$fallo?> </li>
 				<?php endforeach; ?>
 			
 			<?php
-				include __DIR__.'/';
+				
 			?>
 			<?php
-			if(empty($fallos))?>
-			<div class="alert alert-info">
-			<?php
+			if(empty($fallos))
+				include __DIR__.'/info.php'
 			?>
+			
+			
 			
 
 			</div>
