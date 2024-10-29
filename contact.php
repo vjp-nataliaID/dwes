@@ -23,7 +23,7 @@
         }
 
     }
-    require 'views/contact.views.php';
     require 'utils/utils.php';
+    require 'views/contact.views.php';
     
 ?>
