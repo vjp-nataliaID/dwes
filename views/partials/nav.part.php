@@ -29,6 +29,9 @@
               <li class="<?php echo esOpcionMenuActiva('/contact.php') ? "active" : ""?> lien">
                 <a href="<?php echo esOpcionMenuActiva('/contact.php') ? "#" : "contact.php"?>">
                   <i class="fa fa-phone-square sr-icons"></i> Contact</a></li>
+              <li class="<?php echo esOpcionMenuActiva('/gallery.php') ? "active" : ""?> lien">
+                <a href="<?php echo esOpcionMenuActiva('/gallery.php') ? "#" : "gallery.php"?>">
+                  <i class="fa fa-phone-square sr-icons"></i> Gallery</a></li>
             </ul>
          </div>
      </div>
