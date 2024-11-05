@@ -1,25 +1,25 @@
-<?php include __DIR__.'/partials/inicio-doc.part.php';?>
-<?php include __DIR__.'/partials/nav.part.php';?>
+<?php include __DIR__ . '/partials/inicio-doc.part.php'; ?>
+<?php include __DIR__ . '/partials/nav.part.php'; ?>
 
 <!-- Principal Content Start -->
- <div id="galeria">
+<div id="galeria">
     <div class="container">
         <div class="col-xs-12 col-sm-8 col-sm-push-2">
             <h1>GALERIA</h1>
             <hr>
 
-            <?php if($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
-                <div class="alert alert-<?=empty($errores)?'info' : 'danger';?> alert-dismissibre" role="alert">
+            <?php if ($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
+                <div class="alert alert-<?= empty($errores) ? 'info' : 'danger'; ?> alert-dismissibre" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">x</span>
                     </button>
-                    <?php if(empty($errores)) : ?>
+                    <?php if (empty($errores)) : ?>
                         <p><?= $mensaje ?></p>
                     <?php else : ?>
                         <ul>
                             <?php foreach ($errores as $error) : ?>
-                                <li><?=$error ?></li>
-                                <?php endforeach; ?>
+                                <li><?= $error ?></li>
+                            <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
                 </div>
@@ -41,11 +41,29 @@
             </form>
             <hr class="divider">
             <div class="imagenes_galeria">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Visualizaciones</th>
+                            <th scope="col">Likes</th>
+                            <th scope="col">Descargas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($imagenes as $img): ?>
+                            <tr>
+                            </tr>
 
-            </div>    
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+
+            </div>
         </div>
     </div>
- </div>
+</div>
 
 
- <?php include __DIR__.'/partials/fin-doc.part.php'; ?>
+<?php include __DIR__ . '/partials/fin-doc.part.php'; ?>

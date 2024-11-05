@@ -4,6 +4,12 @@ define('FILE_TYPE_NON_SUPP',9);
 define('UPLOAD_FILE_BY_POST',10);
 define('FILE_CANNOT_MOVE',11);
 define('FILE_EMPTY',12);
+
+
+
+define('ERROR_EXECUTE_STATEMENT',13);
+
+
 $errorsString[UPLOAD_ERR_OK] =  "No hay errores";
 $errorsString[UPLOAD_ERR_INI_SIZE] =  "El fichero excede el tamaño máximo soportado";
 $errorsString[UPLOAD_ERR_FORM_SIZE] =  "El fichero excede el tamaño máximo soportado";
@@ -16,6 +22,6 @@ $errorsString[FILE_TYPE_NON_SUPP] =  "Tipo de fichero no soportado";
 $errorsString[UPLOAD_FILE_BY_POST] = "El fichero no se ha subido mediante el formulario";
 $errorsString[FILE_CANNOT_MOVE] = "No se pudo mover el fichero";
 $errorsString[FILE_EMPTY] = "Debes seleccionar un fichero";
-
+$errorsString[ERROR_EXECUTE_STATEMENT] = "NO SE HA PODIDO EJECUTAR LA CONSULTA";
 define('ERROR_STRINGS', $errorsString);
 ?>
