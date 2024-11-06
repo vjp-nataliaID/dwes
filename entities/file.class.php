@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__.'../../utils/strings.php';
+require_once 'utils/strings.php';
 
 class File {
     private $file;
@@ -30,10 +30,7 @@ class File {
             throw new FileException(ERROR_STRINGS[$this->file['error']]);
         }
         //Comprobamos si el fichero subido es de un tipo de los que tenemos soportados
-        if(in_array($this->file['type'], $arrTypes)===false){
-            //Error de tipo no soportado
-            throw new FileException(ERROR_STRINGS[FILE_TYPE_NON_SUPP]);
-        }
+        
         
     }
     public function getFileName(){

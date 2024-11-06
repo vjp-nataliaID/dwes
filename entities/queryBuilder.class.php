@@ -26,7 +26,7 @@
                     throw new QueryException(ERROR_STRINGS[ERROR_EXECUTE_STATEMENT]);
             }
 
-            return $pdoStatement->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE)
+            return $pdoStatement->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE);
         }
 
     }

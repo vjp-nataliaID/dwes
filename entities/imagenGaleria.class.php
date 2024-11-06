@@ -5,20 +5,10 @@
         private $numVisualizaciones;
         private $numLikes;
         private $numDownloads;
+        private $id;  
 
         const RUTA_IMAGENES_PORTFOLIO ='images/index/portfolio/';
         const RUTA_IMAGENES_GALLERY='images/index/gallery/';
-
-        public function __construct(string $nombre, string $descripcion,int $numVisualizaciones=0, int $numLikes=0, int $numDownloads=0 )
-        {
-            $this->nombre = $nombre;
-            $this->descripcion = $descripcion;
-            $this->numVisualizaciones = $numVisualizaciones;
-            $this->numLikes = $numLikes;
-            $this->numDownloads = $numDownloads;
-            
-        }
-
 
         public function getNombre(): string{
             return $this->nombre;
@@ -78,6 +68,24 @@
         public function getUrlGallery() : string {
             return self::RUTA_IMAGENES_GALLERY.$this->getNombre();
         }
+
+      
+      public function getId()
+      {
+            return $this->id;
+      }
+
+      /**
+       * Set the value of id
+       *
+       * @return  self
+       */ 
+      public function setId($id)
+      {
+            $this->id = $id;
+
+            return $this;
+      }
     }
 
 ?>
