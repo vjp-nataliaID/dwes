@@ -4,11 +4,11 @@
         private static $container=[];
 
         public static function bind($clave, $valor){
-            self::$container[$clave]=$valor;
+            static::$container[$clave]=$valor;
         }
 
         public static function get(string $key){
-            if(!array_key_exists($key, self::$container)){
+            if(!array_key_exists($key, static::$container)){
                 throw new AppException(getErrorString(ERROR_APP_CORE));
                 
             }

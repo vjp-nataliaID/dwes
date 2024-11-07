@@ -5,22 +5,24 @@ require_once 'utils/strings.php';
 require 'entities/connection.class.php';
 require_once 'entities/queryBuilder.class.php';
 require_once 'entities/app.class.php';
+require_once 'entities/imagenGaleria.class.php';
 $errores = [];
-$descripcion = ''; 
-$mensaje='';
+$descripcion = '';
+$mensaje = '';
+
+
+
+
+$config = require_once 'app/config.php';
+
+App::bind('config', $config);
+$connection = App::getConnection();
+
+// $connection = Connection::make($config['database']);
+
+
 try {
-
-
-
-  $config = require_once 'app/config.php';
-  
-  App::bind('config',$config);
-  $connection = App::getConnection();
-
-  // $connection = Connection::make($config['database']);
-
-
-
+  $connection = Connection::make();
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $descripcion = trim(htmlspecialchars($_POST['descripcion']));
@@ -30,35 +32,30 @@ try {
     //$imagen -> copyFile(ImagenGaleria::RUTA_IMAGENES_GALLERY, ImagenGaleria::RUTA_IMAGENES_PORTFOLIO);
     //Preparamos la sentencia sql a ejecutar.
 
-    $sql = "INSERT INTO imagenes (nombre, descripcion) VALUES (:nombre, :descripcion)";
-    $pdoStatement = $connection->prepare($sql);
-    //El párametro fileName es 'imagen' porque así lo indicamos en el formulario
-    $arrayParametrosStatement = [':nombre' => $imagen->getFileName(), ':descripcion' => $descripcion];
-    //Lanzamos la sentencia y vemos si se ha ejecutado correctamente.
-    $response = $pdoStatement->execute($arrayParametrosStatement);
-    if ($response === false) {
-      $errores[] = 'No se ha podido guardar la imagen en la base de datos.';
+    $sqlStatement = "INSERT INTO imagenes (nombre, descripcion) VALUES ('" . $imagen->getFileName() . "', '$descripcion')";
+    $pdoStatement = $connection->prepare($sqlStatement);
+    $parametros = [':nombre'=>$imagen->getFileName(),':descripcion'=>$descripcion];
+    if ($pdoStatement->execute($parametros) === false) {
+      $errores[] = 'No se ha podido guardar la imagen en la BD';
     } else {
       $descripcion = '';
-      $mensaje = 'Imagen guardada';
+      $mensaje = 'Imagen Guardada';
     }
   }
-  $querySql = 'SELECT * from imagenes';
-  $queryStatement = $connection->query($querySql);
-
   $queryBuilder = new QueryBuilder($connection);
   $imagenes = $queryBuilder->findAll('imagenes','ImagenGaleria');
+
 } catch (FileException $exception) {
   $errores[] = $exception->getMessage();
 
 } catch (QueryException $exception) {
-  $errores [] = $exception->getMessage();
+  $errores[] = $exception->getMessage();
 
-}catch(AppException $exception){
-  $errores [] = $exception->getMessage();
-  
+} catch (AppException $exception) {
+  $errores[] = $exception->getMessage();
+} catch (PDOException $exception){
+  $errores[] = $exception->getMessage();
 }
-
 
 
 

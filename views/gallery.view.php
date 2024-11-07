@@ -63,7 +63,7 @@
                             </td>
                             <td><?= $img->getNumLikes()?> </td>
                             <td><?= $img->getNumVisualizaciones()?></td>
-                            <td><?= $img->getNumDownloads()?></td>
+                            <td><?= $img->getNumDescargas()?></td>
                             </tr>
 
                         <?php endforeach; ?>

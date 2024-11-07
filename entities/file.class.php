@@ -27,7 +27,7 @@ class File {
   
         }
         if(in_array($this->file['type'], $arrTypes) === false){
-            throw new FileException(ERROR_STRINGS[$this->file['error']]);
+            throw new FileException(ERROR_STRINGS[$this->file['type']]);
         }
         //Comprobamos si el fichero subido es de un tipo de los que tenemos soportados
         
