@@ -31,7 +31,7 @@
                   <i class="fa fa-phone-square sr-icons"></i> Contact</a></li>
               <li class="<?php echo esOpcionMenuActiva('/gallery.php') ? "active" : ""?> lien">
                 <a href="<?php echo esOpcionMenuActiva('/gallery.php') ? "#" : "gallery.php"?>">
-                  <i class="fa fa-phone-square sr-icons"></i> Gallery</a></li>
+                  <i class="fa fa-image sr-icons"></i> Gallery</a></li>
             </ul>
          </div>
      </div>

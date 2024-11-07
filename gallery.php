@@ -29,7 +29,7 @@ try {
     $tiposAceptados = ['image/jpeg', 'image/jpg', 'image/gif', 'image/png'];
     $imagen = new File('imagen', $tiposAceptados);
     $imagen->saveUploadFile(ImagenGaleria::RUTA_IMAGENES_GALLERY);
-    //$imagen -> copyFile(ImagenGaleria::RUTA_IMAGENES_GALLERY, ImagenGaleria::RUTA_IMAGENES_PORTFOLIO);
+    $imagen -> copyFile(ImagenGaleria::RUTA_IMAGENES_GALLERY, ImagenGaleria::RUTA_IMAGENES_PORTFOLIO);
     //Preparamos la sentencia sql a ejecutar.
 
     $sqlStatement = "INSERT INTO imagenes (nombre, descripcion) VALUES ('" . $imagen->getFileName() . "', '$descripcion')";
