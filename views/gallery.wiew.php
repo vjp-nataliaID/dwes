@@ -1,7 +1,5 @@
 <?php include __DIR__ . '/partials/inicio-doc.part.php'; ?>
-<?php include __DIR__ . '/partials/nav.part.php';
-require_once 'entities/imagenGaleria.class.php';
-?>
+<?php include __DIR__ . '/partials/nav.part.php'; ?>
 
 <!-- Principal Content Start -->
 <div id="galeria">
@@ -54,7 +52,6 @@ require_once 'entities/imagenGaleria.class.php';
                         </tr>
                     </thead>
                     <tbody>
-                    <?php if (!empty($imagenes) && is_array($imagenes)): ?>
                         <?php foreach ($imagenes as $img): ?>
                             <tr>
                                 <th scope="row"><?= $img->getId()?></th>
@@ -66,15 +63,10 @@ require_once 'entities/imagenGaleria.class.php';
                             </td>
                             <td><?= $img->getNumLikes()?> </td>
                             <td><?= $img->getNumVisualizaciones()?></td>
-                            <td><?= $img->getNumDownloads()?></td>
+                            <td><?= $img->getNumDescargas()?></td>
                             </tr>
 
                         <?php endforeach; ?>
-                        <?php else: ?>
-                            <tr>
-                                <td colspan="5">No hay imágenes disponibles.</td>
-                            </tr>
-                        <?php endif; ?>
                     </tbody>
                 </table>
             </div>

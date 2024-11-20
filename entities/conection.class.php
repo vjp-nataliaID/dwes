@@ -1,12 +1,16 @@
 <?php
-
+require_once 'app/config.php';
+require_once 'entities/app.class.php';
     class Connection{
         public static function make(){
 
             try{
                 $config = App::get('config')['database'];
                 $connection = new PDO(
-                    $config['connection'] . ':dbname=' . $config['name'], $config['username'], $config['password'], $config['options']
+                    $config['connection'] . ';dbname=' . $config['name'],
+                    $config['username'],
+                    $config['password'], 
+                    $config['options']
                 );
             }catch(PDOException $PDOException){
                 throw new AppException('No se ha podido crear la conexión a la BD');
