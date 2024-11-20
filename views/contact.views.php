@@ -13,22 +13,22 @@
        	   <h1>CONTACT US</h1>
        	   <hr>
        	   <p>Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-			  <?php if (!empty($fallos)) : ?>
-                <div class="alert alert-danger">
-                    <ul>
-                        <?php foreach ($fallos as $fallo) : ?>
-                            <li><?= $fallo ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
-            <?php endif; ?>
-			<?php if (isset($success_message)) : ?>
-                <div class="alert alert-info">
-                    <?= $success_message ?>
-                </div>
-            <?php endif; ?>
-		
-		
+	    	<?php
+				if(!empty($fallos))
+					foreach($fallos as $fallo):?>
+				<li> <?=$fallo?> </li>
+				<?php endforeach; ?>
+			
+			<?php
+				include __DIR__.'/';
+			?>
+			<?php
+			if(empty($fallos))?>
+			<div class="alert alert-info">
+			<?php
+			?>
+			
+			
 			
 
 			</div>
