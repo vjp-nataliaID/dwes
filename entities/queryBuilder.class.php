@@ -63,7 +63,7 @@ abstract class QueryBuilder{
             $this->connection->commit();
 
         }catch(PDOException $pdoException){
-            $this->connection->rolBack();
+            $this->connection->rollBack();
             throw new QueryException("No se ha podido realizar la operacion");
         }
     }

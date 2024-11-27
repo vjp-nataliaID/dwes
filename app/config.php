@@ -1,4 +1,5 @@
 <?php
+//Devuelve la configuracion de la BBDD
 return ['database' =>
             ['name' => 'proyecto',
             'username' => 'user',

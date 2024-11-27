@@ -2,7 +2,7 @@
 require_once 'entities/conection.class.php';
 require_once 'repository/imagenGaleriaRepository.class.php';
 require_once 'repository/categoriaRepository.class.php';
-    
+
 $imagenRepository = new ImagenGaleriaRepository();
 $categoriaRepository = new CategoriaRepository();
 
@@ -12,7 +12,7 @@ $categorias = $categoriaRepository->findAll();
 
 shuffle($imagenes);
 
-for ($i = 0; $i < 12 && $i < count($imagenes); $i++): ?>
+for ($i = 0; $i < count($imagenes); $i++): ?>
     <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="sol">
             <img class="img-responsive" src="<?= $imagenes[$i]->getUrlPortfolio() ?>" alt="<?= $imagenes[$i]->getDescripcion() ?>">

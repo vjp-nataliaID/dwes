@@ -2,6 +2,6 @@
 // Cargar la configuración solo una vez
 $config = require 'app/config.php';
 
-// Registrar la configuración en el contenedor
+// Registrar la configuración
 App::bind('config', $config);
 ?>
