@@ -16,7 +16,7 @@
             $this->asunto = $asunto;
             $this->email = $email;
             $this->texto = $texto;
-            $this->fecha = date("Y-m-d");
+            $this->fecha = date("Y-m-d:H-i-s");
             $this->id = null;
         }
 

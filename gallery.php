@@ -22,8 +22,7 @@ try {
     $categoriaRepository = new CategoriaRepository();
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-
+        
         $descripcion = trim(htmlspecialchars($_POST['descripcion']));
         $categoria = trim(htmlspecialchars($_POST['categoria']));
 
