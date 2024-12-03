@@ -4,7 +4,7 @@
     require_once 'entities/file.class.php';
     require_once 'entities/queryBuilder.class.php';
     require_once 'entities/app.class.php';
-    require_once 'entities/conection.class.php';
+   
     require_once 'repository/imagenAsociadosRepository.class.php';
 
     $errores = [];
@@ -13,9 +13,7 @@
     $mensaje = '';
 
     try{
-        require_once 'init.php';
-        $conexion = App::get('config');
-
+       
         $asociadoRepository = new ImagenAsociadoRepository();
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
