@@ -1,5 +1,5 @@
 <?php
-  include __DIR__.'/partials/inicio-doc.part.php'
+  include 'partials/inicio-doc.part.php'
   ?>
 
 <!-- Navigation Bar -->
@@ -166,4 +166,4 @@
      </div>
    </footer>
 
-   <?php include __DIR__.'/partials/fin-doc.part.php'?>
+   <?php include 'partials/fin-doc.part.php'?>

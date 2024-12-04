@@ -12,9 +12,13 @@
                 <?php foreach ($asociadosAMostrar as $asociado): ?>
                     <ul class="list-inline">
                         <!-- Muestra el logo del asociado -->
-                        <li><img src="images/index/<?= htmlspecialchars($asociado->getLogo()) ?>" alt="<?= htmlspecialchars($asociado->getDescripcion()) ?>" title="<?= htmlspecialchars($asociado->getDescripcion()) ?>"></li>
-                        <!-- Muestra el nombre del asociado -->
-                        <li><?= htmlspecialchars($asociado->getNombre()) ?></li>
+                        <li>
+                            <img src="images/asociados/<?= htmlspecialchars($asociado->getLogo()) ?>" alt="<?= htmlspecialchars($asociado->getDescripcion()) ?>" title="<?= htmlspecialchars($asociado->getDescripcion()) ?>" width="100px">
+                        </li>
+                      
+                        <li>
+                            <?= htmlspecialchars($asociado->getNombre()) ?>
+                        </li>
                     </ul>
                 <?php endforeach; ?>
             </div>

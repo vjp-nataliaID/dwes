@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'database/IEntity.class.php';
+    require_once '../database/IEntity.class.php';
     class ImagenGaleria implements IEntity{
         private $nombre;
         private $descripcion;
@@ -8,10 +8,11 @@
         private $numLikes;
         private $numDescargas;
         private $id;
+        private $categoria;
         const RUTA_IMAGENES_PORTFOLIO ='images/index/portfolio/';
         const RUTA_IMAGENES_GALLERY='images/index/gallery/';
 
-        public function __construct(string $nombre ='', string $descripcion='',int $numVisualizaciones=0, int $numLikes=0, int $numDescargas=0)
+        public function __construct(string $nombre ='', string $descripcion='',int $categoria=0,int $numVisualizaciones=0, int $numLikes=0, int $numDescargas=0)
         {
             $this->nombre = $nombre;
             $this->descripcion = $descripcion;
@@ -19,6 +20,7 @@
             $this->numLikes = $numLikes;
             $this->numDescargas = $numDescargas;
             $this->id = null;
+            $this->categoria = $categoria;
             
         }
 
@@ -75,7 +77,25 @@
 
                 return $this;
         }
+        /**
+         * Get the value of categoria
+         */ 
+        public function getCategoria()
+        {
+                return $this->categoria;
+        }
 
+        /**
+         * Set the value of categoria
+         *
+         * @return  self
+         */ 
+        public function setCategoria($categoria)
+        {
+                $this->categoria = $categoria;
+
+                return $this;
+        }
 
         public function getUrlPortfolio():string{
             return self::RUTA_IMAGENES_PORTFOLIO.$this->getNombre();
@@ -90,11 +110,15 @@
                 'id' => $this->getId(),
                 'nombre' => $this->getNombre(),
                 'descripcion' => $this->getDescripcion(),
+                'categoria' => $this->getCategoria(),
                 'numVisualizaciones' => $this->getNumVisualizaciones(),
                 'numLikes' => $this->getNumLikes(),
-                'numDescargas' => $this->getNumDescargas()
+                'numDescargas' => $this->getNumDescargas(),
+                
             ];
         }
+
+        
     }
 
 ?>

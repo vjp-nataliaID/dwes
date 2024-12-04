@@ -1,9 +1,9 @@
 <?php
-require_once 'app/config.php';
-require_once 'entities/app.class.php';
+require_once '../app/config.php';
+require_once '../entities/app.class.php';
     class Connection{
         public static function make(){
-
+            //Creamos la conexion a partir del fichero de configuración
             try{
                 $config = App::get('config')['database'];
                 $connection = new PDO(

@@ -1,17 +1,21 @@
 <?php
-
-class Asociado{
+require_once '../entities/queryBuilder.class.php';
+class Asociado implements IEntity{
     private $nombre;
     private $logo;
     private $descripcion;
+    private $id;
 
-    public function __construct($nombre, $logo, $descripcion) {
+    public function __construct($nombre='', $logo='', $descripcion='') {
         $this->nombre = $nombre;
         $this->logo = $logo;
         $this->descripcion = $descripcion;
+        $this->id=null;
     }
 
-    const RUTA_IMG_ASOCIADOS= 'images/index/';
+    const RUTA_IMG_ASOCIADOS= 'images/asociados/';
+    
+    
     /**
      * Get the value of nombre
      */ 
@@ -70,6 +74,38 @@ class Asociado{
         $this->descripcion = $descripcion;
 
         return $this;
+    }
+    public function toArray(): array
+    {
+        return [
+            'nombre' => $this->getNombre(),
+            'logo' => $this->getLogo(),
+            'descripcion' => $this->getDescripcion()
+        ];
+    }
+
+    /**
+     * Get the value of id
+     */ 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    public function getUrlAsociados(){
+        return self::RUTA_IMG_ASOCIADOS.$this->getLogo();
     }
 }
 

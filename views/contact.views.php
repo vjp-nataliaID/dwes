@@ -1,9 +1,9 @@
 <?php
-  include __DIR__.'/partials/inicio-doc.part.php'
+  include 'partials/inicio-doc.part.php'
   ?>
 
 <?php
-  include __DIR__.'/partials/nav.part.php';
+  include 'partials/nav.part.php';
   ?>
 
 <!-- Principal Content Start -->
@@ -90,4 +90,4 @@
    </div>
 <!-- Principal Content Start -->
 
-<?php include __DIR__.'/partials/fin-doc.part.php'?>
+<?php include 'partials/fin-doc.part.php'?>
