@@ -1,9 +1,11 @@
 <?php
 
     require_once 'utils/bootstrap.php';
-    $routes = require 'utils/routes.php';
-    $uri = trim($_SERVER['REQUEST_URI'],'/');
-    require $routes[$uri];
+
+    $routes = new Router();
+    require 'utils/routes.php';
+
+    require $routes[Request::uri()];
     
 
 ?>
