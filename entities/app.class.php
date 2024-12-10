@@ -1,6 +1,7 @@
 <?php
-    require __DIR__.'/../exceptions/appException.class.php';
+    require __DIR__.'/../exceptions/AppException.class.php';
 
+    use entities\Connection;
     class App{
         private static $container=[];
     

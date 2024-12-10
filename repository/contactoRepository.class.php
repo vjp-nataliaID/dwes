@@ -1,5 +1,5 @@
 <?php 
-require_once 'entities/queryBuilder.class.php';
+require_once 'entities/QueryBuilder.class.php';
 
 
 class ContactoRepository extends Querybuilder{

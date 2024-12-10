@@ -1,6 +1,10 @@
 <?php
-require_once 'entities/queryBuilder.class.php';
+require_once 'entities/QueryBuilder.class.php';
+
+namespace proyecto\entities;
+use proyecto\database\IEntity;
 class Asociado implements IEntity{
+    
     private $nombre;
     private $logo;
     private $descripcion;

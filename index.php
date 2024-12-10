@@ -2,10 +2,15 @@
 
     require_once 'utils/bootstrap.php';
 
-    $routes = new Router();
+    $router = new Router();
     require 'utils/routes.php';
 
-    require $routes[Request::uri()];
+    try{
+        require Router::load('utils/routes.php')->direct(Request::uri(),Request::method());
+
+    }catch(NotFoundException $exception){
+        die($exception->getMessage());
+    }
     
 
 ?>

@@ -1,6 +1,9 @@
 <?php
 require_once 'app/config.php';
-require_once 'entities/app.class.php';
+require_once 'entities/App.class.php';
+
+use PDO;
+use PDOException;
     class Connection{
         public static function make(){
             //Creamos la conexion a partir del fichero de configuración
@@ -17,6 +20,7 @@ require_once 'entities/app.class.php';
             }
         return $connection;
         }
+        
     }
 
 ?>

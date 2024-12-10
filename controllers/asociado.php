@@ -1,11 +1,10 @@
 <?php
     require_once 'utils/utils.php';
-    require_once 'entities/asociado.class.php';
-    require_once 'entities/file.class.php';
-    require_once 'entities/queryBuilder.class.php';
-    require_once 'entities/app.class.php';
-   
-    require_once 'repository/imagenAsociadosRepository.class.php';
+    require_once 'entities/Asociado.class.php';
+    require_once 'entities/File.class.php';
+    require_once 'entities/QueryBuilder.class.php';
+    require_once 'entities/App.class.php';
+    require_once 'repository/ImagenAsociadosRepository.class.php';
 
     $errores = [];
     $nombre = '';

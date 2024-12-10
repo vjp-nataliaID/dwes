@@ -1,12 +1,12 @@
 <?php
 
 require_once 'utils/utils.php';
-require_once 'entities/app.class.php';
-require_once 'entities/conection.class.php';
-require_once 'entities/contacto.class.php';
-require_once 'repository/contactoRepository.class.php';
-require_once 'exceptions/appException.class.php';
-require_once 'exceptions/queryException.class.php';
+require_once 'entities/App.class.php';
+require_once 'entities/Conection.class.php';
+require_once 'entities/Contacto.class.php';
+require_once 'repository/ContactoRepository.class.php';
+require_once 'exceptions/AppException.class.php';
+require_once 'exceptions/QueryException.class.php';
 
 // Inicialización del array de errores y de variables de los campos
 $fallos = [];
