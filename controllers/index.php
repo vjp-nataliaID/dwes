@@ -6,9 +6,6 @@ require_once 'entities/App.class.php';
 require_once 'repository/ImagenAsociadosRepository.class.php';
 require_once 'entities/Conection.class.php';
 
-require_once 'init.php';
-$conexion  = App::get('config');
-
 $asociadoRepository = new ImagenAsociadoRepository();
 $asociados = $asociadoRepository->findAll();
 // $arrayImagenes = array();

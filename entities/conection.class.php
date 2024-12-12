@@ -1,6 +1,10 @@
 <?php
-require_once '../app/config.php';
-require_once '../entities/app.class.php';
+
+    namespace proyecto\entities;
+    use proyecto\entities\App;
+    use PDO;
+    use PDOException;
+    use proyecto\exceptions\AppException;
     class Connection{
         public static function make(){
             //Creamos la conexion a partir del fichero de configuración
@@ -8,8 +12,9 @@ require_once '../entities/app.class.php';
                 $config = App::get('config')['database'];
                 $connection = new PDO(
                     $config['connection'] . ';dbname=' . $config['name'],
+                    
                     $config['username'],
-                    $config['password'], 
+                    $config['password'],
                     $config['options']
                 );
             }catch(PDOException $PDOException){
@@ -17,6 +22,7 @@ require_once '../entities/app.class.php';
             }
         return $connection;
         }
+        
     }
 
 ?>

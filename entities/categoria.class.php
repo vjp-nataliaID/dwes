@@ -1,7 +1,6 @@
 <?php
-
-    require_once 'database/IEntity.class.php';
-
+   namespace proyecto\entities;
+   use database\IEntity;
     class Categoria implements IEntity {
         /**
          * @var int

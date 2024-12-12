@@ -32,7 +32,7 @@
           <a href="<?php echo esOpcionMenuActiva('contact.php') ? "#" : "/contact" ?>">
             <i class="fa fa-phone-square sr-icons"></i> Contact</a>
         </li>
-        <li class="<?php echo esOpcionMenuActiva('imagenes-galeria') ? "active lien" : "" ?> lien">
+        <li class="<?php echo esOpcionMenuActiva('imagenes-galeria') ? "active" : "" ?> lien">
           <a href="<?php echo esOpcionMenuActiva('imagenes-galeria') ? "#" : "/imagenes-galeria" ?>">
             <i class="fa fa-image sr-icons"></i> Gallery</a>
         </li>

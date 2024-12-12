@@ -5,6 +5,12 @@
     require_once 'entities/QueryBuilder.class.php';
     require_once 'entities/App.class.php';
     require_once 'repository/ImagenAsociadosRepository.class.php';
+    use proyecto\repository\ImagenAsociadoRepository;
+    use proyecto\entities\Asociado;
+    use proyecto\entities\File;
+    use proyecto\exceptions\FileException;
+    use proyecto\exceptions\QueryException;
+    use proyecto\exceptions\AppException;
 
     $errores = [];
     $nombre = '';

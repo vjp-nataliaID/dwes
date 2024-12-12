@@ -1,5 +1,5 @@
-<?php include 'partials/inicio-doc.part.php'; ?>
-<?php include 'partials/nav.part.php'; ?>
+<?php include __DIR__ . '/partials/inicio-doc.part.php'; ?>
+<?php include __DIR__ . '/partials/nav.part.php'; ?>
 
 <!-- Principal Content Start -->
 <div id="galeria">
@@ -24,7 +24,7 @@
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
-            <form class="form-horizontal" method="post" enctype="multipart/form-data" action="gallery_new">
+            <form class="form-horizontal" method="post" enctype="multipart/form-data" action="imagenes-galeria/nueva">
                 <div class="form-group">
                     <div class="col-xs-12">
                         <label class="label-control">Imagen</label>
@@ -89,4 +89,4 @@
 </div>
 
 
-<?php include  'partials/fin-doc.part.php'; ?>
+<?php include __DIR__ . '/partials/fin-doc.part.php'; ?>

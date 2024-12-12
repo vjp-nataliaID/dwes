@@ -1,5 +1,7 @@
 <?php
-require_once '../exceptions/FileException.class.php';
+
+namespace proyecto\entities;
+use proyecto\exceptions\FileException;
 
 
 class File

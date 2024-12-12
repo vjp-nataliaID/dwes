@@ -1,6 +1,6 @@
 <?php 
-require_once 'entities/QueryBuilder.class.php';
-
+namespace proyecto\repository;
+use proyecto\entities\QueryBuilder;
 
 class ImagenAsociadoRepository extends Querybuilder{
 

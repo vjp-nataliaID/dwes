@@ -1,9 +1,11 @@
 <?php
-require_once 'exceptions/QueryException.class.php';
-require_once 'entities/App.class.php';
-require_once 'entities/ImagenGaleria.class.php';
-require_once 'entities/Categoria.class.php';
-
+namespace proyecto\entities;
+use database\IEntity;
+use proyecto\exceptions\QueryException;
+use proyecto\exceptions\NotFoundException;
+use PDO;
+use PDOException;
+use proyecto\entities\App;
 abstract class QueryBuilder{
     private $connection;
     private $table;

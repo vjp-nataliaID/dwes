@@ -1,4 +1,8 @@
 <?php
+
+namespace proyecto\repository;
+use proyecto\entities\QueryBuilder;
+use proyecto\entities\Categoria;
     class CategoriaRepository extends QueryBuilder {
 
         public function __construct(string $table='categorias', string $classEntity='Categoria'){

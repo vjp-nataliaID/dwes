@@ -1,8 +1,7 @@
 <?php
-require_once 'entities/QueryBuilder.class.php';
-
 namespace proyecto\entities;
-use proyecto\database\IEntity;
+use database\IEntity;
+
 class Asociado implements IEntity{
     
     private $nombre;

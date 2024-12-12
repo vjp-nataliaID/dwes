@@ -1,7 +1,9 @@
 <?php
 
-    require_once '../entities/queryBuilder.class.php';
-
+namespace proyecto\repository;
+use proyecto\entities\QueryBuilder;
+use proyecto\entities\Categoria;
+use proyecto\entities\ImagenGaleria;
     class ImagenGaleriaRepository extends Querybuilder{
 
         public function __construct(string $table='imagenes', string $classEntity='ImagenGaleria')

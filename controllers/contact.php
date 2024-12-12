@@ -19,9 +19,7 @@ $mensaje = '';
 
 try {
 
-    //Conectamos con la BBDD
-    require_once 'init.php';
-    $conexion = App::get('config');
+
 
     $contactoRepository = new ContactoRepository();
     

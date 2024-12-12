@@ -1,10 +1,10 @@
 <?php
-    require_once 'entities/App.class.php';
-    require_once 'entities/Request.class.php';
-    require_once 'entities/Router.class.php';
+    namespace proyecto\utils;
+
     require_once 'vendor/autoload.php';
-    require_once 'repository/MyLog.class.php';
-    require_once 'exceptions/NotFoundException.class.php';
+    use proyecto\entities\App;
+    use proyecto\entities\Router;
+    use proyecto\repository\MyLog;
 
 
     $config  = require_once 'app/config.php';
