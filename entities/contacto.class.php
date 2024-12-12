@@ -1,5 +1,5 @@
 <?php
-    require_once '../database/IEntity.class.php';
+    require_once 'database/IEntity.class.php';
     class Contacto implements IEntity {
         private $id;
         private $nombre;

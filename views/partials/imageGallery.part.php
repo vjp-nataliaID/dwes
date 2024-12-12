@@ -1,7 +1,7 @@
 <?php
-require_once '../entities/conection.class.php';
-require_once '../repository/imagenGaleriaRepository.class.php';
-require_once '../repository/categoriaRepository.class.php';
+require_once 'entities/conection.class.php';
+require_once 'repository/imagenGaleriaRepository.class.php';
+require_once 'repository/categoriaRepository.class.php';
 
 $imagenRepository = new ImagenGaleriaRepository();
 $categoriaRepository = new CategoriaRepository();

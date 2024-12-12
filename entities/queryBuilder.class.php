@@ -1,8 +1,8 @@
 <?php
-require_once '../exceptions/queryException.class.php';
-require_once '../entities/app.class.php';
-require_once '../entities/imagenGaleria.class.php';
-require_once '../entities/categoria.class.php';
+require_once 'exceptions/QueryException.class.php';
+require_once 'entities/App.class.php';
+require_once 'entities/ImagenGaleria.class.php';
+require_once 'entities/Categoria.class.php';
 
 abstract class QueryBuilder{
     private $connection;

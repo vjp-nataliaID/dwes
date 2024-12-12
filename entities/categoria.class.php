@@ -1,6 +1,6 @@
 <?php
 
-    require_once '../database/IEntity.class.php';
+    require_once 'database/IEntity.class.php';
 
     class Categoria implements IEntity {
         /**

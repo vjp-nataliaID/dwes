@@ -1,11 +1,13 @@
 <?php
-require_once '../utils/utils.php';
-require_once '../entities/imagenGaleria.class.php';
-require_once '../entities/asociado.class.php';
-require_once '../entities/app.class.php';
-require_once '../repository/imagenAsociadosRepository.class.php';
-require_once '../entities/conection.class.php';
+require_once 'utils/utils.php';
+require_once 'entities/ImagenGaleria.class.php';
+require_once 'entities/Asociado.class.php';
+require_once 'entities/App.class.php';
+require_once 'repository/ImagenAsociadosRepository.class.php';
+require_once 'entities/Conection.class.php';
 
+require_once 'init.php';
+$conexion  = App::get('config');
 
 $asociadoRepository = new ImagenAsociadoRepository();
 $asociados = $asociadoRepository->findAll();

@@ -1,14 +1,15 @@
 <?php
-    require_once 'utils/bootstrap.php';
-    require_once 'entities/router.class.php';
 
+    require_once 'utils/bootstrap.php';
+
+    $router = new Router();
+    require 'utils/routes.php';
 
     try{
-        
         require Router::load('utils/routes.php')->direct(Request::uri(),Request::method());
 
-    }catch(Exception $e){
-        die($e->getMessage());
+    }catch(NotFoundException $exception){
+        die($exception->getMessage());
     }
     
 

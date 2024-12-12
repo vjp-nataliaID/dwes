@@ -1,5 +1,5 @@
-<?php include 'partials/inicio-doc.part.php'; ?>
-<?php include 'partials/nav.part.php'; ?>
+<?php include __DIR__ . '/partials/inicio-doc.part.php'; ?>
+<?php include __DIR__ . '/partials/nav.part.php'; ?>
 
 <!-- Principal Content Start -->
 <div id="galeria">
@@ -77,4 +77,4 @@
 </div>
 
 
-<?php include 'partials/fin-doc.part.php'; ?>
+<?php include __DIR__ . '/partials/fin-doc.part.php'; ?>
