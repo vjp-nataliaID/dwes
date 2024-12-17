@@ -9,6 +9,14 @@ require_once 'repository/ImagenGaleriaRepository.class.php';
 require_once 'repository/CategoriaRepository.class.php';
 require_once 'entities/Categoria.class.php';
 require_once 'entities/App.class.php';
+use proyecto\repository\ImagenGaleriaRepository;
+use proyecto\entities\ImagenGaleria;
+use proyecto\entities\File;
+use proyecto\entities\App;
+use proyecto\exceptions\AppException;
+use proyecto\exceptions\QueryException;
+use proyecto\exceptions\FileException;
+
 
 $descripcion = '';
 

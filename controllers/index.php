@@ -5,7 +5,7 @@ require_once 'entities/Asociado.class.php';
 require_once 'entities/App.class.php';
 require_once 'repository/ImagenAsociadosRepository.class.php';
 require_once 'entities/Conection.class.php';
-
+use proyecto\repository\ImagenAsociadoRepository;
 $asociadoRepository = new ImagenAsociadoRepository();
 $asociados = $asociadoRepository->findAll();
 // $arrayImagenes = array();

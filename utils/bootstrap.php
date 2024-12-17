@@ -1,10 +1,11 @@
 <?php
     namespace proyecto\utils;
-
-    require_once 'vendor/autoload.php';
     use proyecto\entities\App;
     use proyecto\entities\Router;
     use proyecto\repository\MyLog;
+    require_once 'utils/utils.php';
+    require_once 'vendor/autoload.php';
+  
 
 
     $config  = require_once 'app/config.php';

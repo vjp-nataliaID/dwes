@@ -7,7 +7,10 @@ require_once 'entities/Contacto.class.php';
 require_once 'repository/ContactoRepository.class.php';
 require_once 'exceptions/AppException.class.php';
 require_once 'exceptions/QueryException.class.php';
-
+use proyecto\repository\ContactoRepository;
+use proyecto\entities\Contacto;
+use proyecto\exceptions\AppException;
+use proyecto\exceptions\QueryException;
 // Inicialización del array de errores y de variables de los campos
 $fallos = [];
 $nombre = '';

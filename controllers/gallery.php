@@ -8,7 +8,11 @@ require_once 'exceptions/AppException.class.php';
 require_once 'repository/ImagenGaleriaRepository.class.php';
 require_once 'repository/CategoriaRepository.class.php';
 require_once 'entities/Categoria.class.php';
-
+use proyecto\repository\ImagenGaleriaRepository;
+use proyecto\repository\CategoriaRepository;
+use proyecto\exceptions\FileException;
+use proyecto\exceptions\QueryException;
+use proyecto\exceptions\AppException;
 $errores = [];
 $descripcion = '';
 $mensaje = '';

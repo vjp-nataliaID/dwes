@@ -6,6 +6,7 @@
     require_once 'entities/app.class.php';
     require_once 'repository/imagenAsociadosRepository.class.php';
 
+    use proyecto\entities;
     $errores = [];
     $nombre = '';
     $descripcion = '';
