@@ -3,6 +3,7 @@
     use proyecto\entities\App;
     use proyecto\entities\Router;
     use proyecto\repository\MyLog;
+    require_once 'entities/app.class.php';
     require_once 'utils/utils.php';
     require_once 'vendor/autoload.php';
   

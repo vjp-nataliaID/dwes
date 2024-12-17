@@ -6,7 +6,7 @@ use proyecto\entities\Categoria;
 use proyecto\entities\ImagenGaleria;
     class ImagenGaleriaRepository extends Querybuilder{
 
-        public function __construct(string $table='imagenes', string $classEntity='ImagenGaleria')
+        public function __construct(string $table='imagenes', string $classEntity=ImagenGaleria::class)
         {
             parent::__construct($table, $classEntity);
         }
