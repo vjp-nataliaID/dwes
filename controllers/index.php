@@ -14,7 +14,7 @@ $asociados = $asociadoRepository->findAll();
 //     array_unshift($arrayImagenes, new ImagenGaleria("$i.jpg", "descripcion imagen $i", numAleatorio(), numAleatorio(), numAleatorio()));
 // }
 
-// function numAleatorio(): int
+// function numAleatorio():
 // {
 //     return rand(0, 1500);
 // }

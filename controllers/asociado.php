@@ -4,7 +4,6 @@
     require_once 'entities/file.class.php';
     require_once 'entities/queryBuilder.class.php';
     require_once 'entities/app.class.php';
-   
     require_once 'repository/imagenAsociadosRepository.class.php';
 
     $errores = [];

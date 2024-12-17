@@ -3,7 +3,6 @@
     use proyecto\entities\Connection;
     use proyecto\exceptions\AppException;
 
-    use entities\Connection;
     class App{
         private static $container=[];
     
